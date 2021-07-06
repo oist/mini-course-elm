@@ -2,3 +2,7 @@
 elm-stuff
 # elm-repl generated files
 repl-temp-*
+
+# VS Code things
+*.code-workspace
+.vscode
