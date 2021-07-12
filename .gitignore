@@ -6,3 +6,6 @@ repl-temp-*
 # VS Code things
 *.code-workspace
 .vscode
+
+# macOS things
+.DS_Store
