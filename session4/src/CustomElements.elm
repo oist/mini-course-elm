@@ -1,12 +1,21 @@
 module CustomElements exposing (..)
 
+{-
+   Taken from https://guide.elm-lang.org/interop/custom_elements.html
+
+    From session4, compile with
+
+    elm make src/CustomElements.elm --output=customElements.js
+
+    and open customElements.html in a browser
+
+-}
+
 import Browser
 import Element as El exposing (Element)
 import Element.Input as Input
 import Html exposing (Html)
 import Html.Attributes
-import Json.Decode as Decode exposing (Decoder)
-import Json.Encode as Encode exposing (Value)
 
 
 

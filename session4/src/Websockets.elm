@@ -72,13 +72,6 @@ type Msg
     | Recv String
 
 
-
--- Use the `sendMessage` port when someone presses ENTER or clicks
--- the "Send" button. Check out websockets.html to see the corresponding
--- JS where this is piped into a WebSocket.
---
-
-
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
@@ -87,6 +80,9 @@ update msg model =
             , Cmd.none
             )
 
+        -- Use the `sendMessage` port when someone presses ENTER or clicks
+        -- the "Send" button. Check out websockets.html to see the corresponding
+        -- JS where this is piped into a WebSocket.
         Send ->
             ( { model | draft = "" }
             , sendMessage model.draft
@@ -100,14 +96,13 @@ update msg model =
 
 
 -- SUBSCRIPTIONS
--- Subscribe to the `messageReceiver` port to hear about messages coming in
--- from JS. Check out the websockets.html file to see how this is hooked up to a
--- WebSocket.
---
 
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =
+    -- Subscribe to the `messageReceiver` port to hear about messages coming in
+    -- from JS. Check out the websockets.html file to see how this is hooked up to a
+    -- WebSocket.
     messageReceiver Recv
 
 

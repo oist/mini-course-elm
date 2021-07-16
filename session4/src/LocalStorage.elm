@@ -48,18 +48,13 @@ type alias Model =
     }
 
 
-
--- Here we use "flags" to load information in from localStorage. The
--- data comes in as a JS value, so we define a `decoder` at the bottom
--- of this file to turn it into an Elm value.
---
--- Check out localStorage.html to see the corresponding code on the JS side.
---
-
-
 init : Value -> ( Model, Cmd Msg )
 init flags =
     ( case Decode.decodeValue decoder flags of
+        -- Here we use "flags" to load information in from localStorage. The
+        -- data comes in as a JS value, so we define a `decoder` at the bottom
+        -- of this file to turn it into an Elm value.
+        -- Check out localStorage.html to see the corresponding code on the JS side.
         Ok model ->
             model
 
@@ -115,7 +110,6 @@ port setStorage : Encode.Value -> Cmd msg
 -- the setStorage command on each step of the update function.
 --
 -- Check out localStorage.html to see how this is handled on the JS side.
---
 
 
 updateWithStorage : Msg -> Model -> ( Model, Cmd Msg )

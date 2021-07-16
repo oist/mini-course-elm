@@ -1,10 +1,16 @@
 module Navigation exposing (..)
 
+{-
+   Taken from https://guide.elm-lang.org/webapps/navigation.html
+
+    Run with elm reactor or compile and import into a file similar to document.html
+
+-}
+
 import Browser exposing (UrlRequest)
 import Browser.Navigation as Nav exposing (Key)
 import Element as El exposing (Element)
 import Element.Font as Font
-import Html exposing (Html)
 import Url exposing (Url)
 
 
