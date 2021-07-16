@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flags</title>
+    <script src="flags.js"></script>
+</head>
+
+<body>
+    <div id="elmApp"></div>
+    <script>
+        var app = Elm.Flags.init({
+            node: document.getElementById('elmApp'),
+            flags: Date.now()
+        });
+    </script>
+</body>
+
+</html>

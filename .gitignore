@@ -3,6 +3,9 @@ elm-stuff
 # elm-repl generated files
 repl-temp-*
 
+# Compiled JavaScript
+*.js
+
 # VS Code things
 *.code-workspace
 .vscode
